@@ -5,51 +5,169 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'Imperial';
+    src: url(../fontes/ImperialScript-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 * {
     margin: 0px;
     padding: 0px;
     font-size: 1em;
 }
 
-body, html {
-    height: 97vh;
-}
-
-
-div#header {
-    background: url(../imagens/fundo.jpg);
-    height: 300px;
-    margin-bottom: -150px;
-    max-width: 100%;
-    text-align: center;
-    padding-top: 40px;
+body {
+    background-image: url(../imagens/maos.jpeg);
     background-repeat: no-repeat;
-    background-position: top center;
-    background-size: contain;
-    font-size: 1.3em;
-}
-
-header h1 {
-    color: rgb(221, 182, 134);
-    text-shadow: 2px 2px 0px black;
-    font-size: 2em;
-}
-
-main {
-    max-width: 800px;
-    text-align: center;
-    min-width: 150px;
-    margin: auto;
-    text-align: justify;
-    padding-top: 100px;
-}
-
-div#footer {
-    text-align: center;
-    background-color: rgb(221, 182, 134);
+    background-size: cover;
+    background-attachment: scroll;
 }
 
 body a {
     text-decoration: none;
-    color: black;
+    color: white;
+}
+
+header strong#nome:hover {
+    color: #B8860B;
+}
+
+header audio.flex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+div#header {
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.363);
+    contain: content;
+    margin-bottom: -55px;
+}
+
+header h1 {
+    color: #435229;
+    text-shadow: 1.2px 1px 0px rgb(149, 223, 149);
+    font-size: 4em;
+    text-align: center;
+    margin: 20px;
+    font-family: 'Imperial', sans-serif;
+}
+
+body img {
+    width: 100%;
+    border-radius: 50%;
+    background-size: auto;
+    border: #435229 1px solid;
+    height: 500px;
+    width: 70%;
+}
+
+body img:hover {
+    border: black 3px solid;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.699);
+    max-width: 800px;
+    text-align: center;
+    min-width: 280px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.438);
+    text-align: justify;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 55px;
+}
+
+
+.card__giratorio {
+    background-color: transparent;
+    width: 100%;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.card__giratorio-conteudo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card__giratorio:hover .card__giratorio-conteudo {
+    transform: rotateY(180deg);
+}
+
+.card__giratorio-conteudo--frente,
+.card__giratorio-conteudo--traseira {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+
+}
+
+.card__giratorio-conteudo--frente {
+    background: linear-gradient(-229deg, #556B2F, #88ac4c);
+    display: block;
+}
+
+.card__giratorio-conteudo--traseira {
+    background: linear-gradient(229deg, #556B2F, #88ac4c);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card__giratorio-conteudo--traseira h1,
+.card__giratorio-conteudo--traseira p {
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card__giratorio-conteudo--traseira h1 {
+    font-size: 1.7rem;
+}
+
+main p {
+    font-family: 'Charm';
+    font-size: 2em;
+}
+
+article {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    text-align: center;
+}
+
+article p {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+aside {
+    text-align: center;
+    font-size: 0.5em;
+}
+
+div#footer {
+    text-align: center;
+    background-color: #556B2F;
+    color: white;
 }
