@@ -5,4 +5,4 @@
 ### Tecnologias usadas foram apenas HTML5 e CSS3.
 
  
- [<img src="https://i.pinimg.com/originals/c1/5a/aa/c15aaa8a8283b627936347a7a5cdcef8.gif" width=115>
+ <img src="https://i.pinimg.com/originals/c1/5a/aa/c15aaa8a8283b627936347a7a5cdcef8.gif" width=500>
